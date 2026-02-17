@@ -1,0 +1,44 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# SQL Server LocalDB
+*.mdf
+*.ldf
+
+# Entity Framework
+Migrations/*Designer.cs
+Migrations/*Snapshot.cs
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Node (if later adding React inside same repo)
+node_modules/
+
+# SQLite (if you switch later)
+*.db

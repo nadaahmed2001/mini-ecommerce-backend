@@ -1,16 +1,13 @@
 using MiniEcommerceBackend.Data;
 using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
 
-using MiniEcommerceBackend.Data;
-using Microsoft.EntityFrameworkCore;
-
+// Add DbContext
 builder.Services.AddDbContext<MyContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-
-var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 

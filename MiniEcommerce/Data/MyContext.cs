@@ -9,7 +9,7 @@ namespace MiniEcommerceBackend.Data
             : base(options)
         {
         }
-0
+
         //Registering the models (model to table)
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
