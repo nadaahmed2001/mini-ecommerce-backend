@@ -31,11 +31,15 @@ namespace MiniEcommerceBackend.Controllers
         }
 
         [HttpGet] //GET /api/products
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int page = 1, int pageSize = 10)
         {
-            //Get all products from the database 
-            var products = await _context.Products.ToListAsync();
+            //Get all products with pagination
+            var products = await _context.Products
+                .Skip((page - 1) * pageSize) //Skip the products that are before the current page
+                .Take(pageSize) //Take the products for the current page
+                .ToListAsync(); //Convert the query to a list
+
             return Ok(products);
         }
-    }
+
 }
