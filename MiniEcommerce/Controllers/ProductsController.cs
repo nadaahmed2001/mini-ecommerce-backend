@@ -41,5 +41,5 @@ namespace MiniEcommerceBackend.Controllers
 
             return Ok(products);
         }
-
+    }
 }

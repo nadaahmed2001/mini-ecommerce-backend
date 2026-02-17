@@ -57,11 +57,11 @@ namespace MiniEcommerceBackend.Controllers
                     return BadRequest("Quantity must be greater than zero.");
 
                 // Check if there is enough stock
-                if (product.AvailableQuantity < item.Quantity)
+                if (product.Stock < item.Quantity)
                     return BadRequest($"Not enough stock for product '{product.Name}'.");
 
                 // Reduce stock
-                product.AvailableQuantity -= item.Quantity;
+                product.Stock -= item.Quantity;
 
                 // Calculate total money
                 total += product.Price * item.Quantity;
